@@ -1,5 +1,9 @@
 # DCGAN
 
+Pytorch implementation of [Deep Convolutional Generative Adversarial Networks](http://arxiv.org/abs/1511.06434) which is a stabilize Generative Adversarial Networks.
+
+![DCGAN结构图](DCGAN.png)
+
 ## 环境准备
 
 - 运行`pip install -r requirements.txt`安装其他依赖
