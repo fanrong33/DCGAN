@@ -11,6 +11,7 @@
 - 可以自己写爬虫爬取[Danbooru](http://link.zhihu.com/?target=http%3A//safebooru.donmai.us/)或者[konachan](http://konachan.net/)
 - 如果你不想从头开始爬图片，可以直接使用爬好的头像数据（275M，约5万多张图片）：https://pan.baidu.com/s/1eSifHcA 提取码：g5qa
 感谢知乎用户[何之源](https://www.zhihu.com/people/he-zhi-yuan-16)爬取的数据。
+
 请把所有的图片保存于data/faces/目录下，形如
 
 ```
@@ -50,10 +51,11 @@ python main.py generate --netd-path=checkpoints/netd_200.pth \
 		--netg-path=checkpoints/netg_200.pth
 		--gen-num=64
 ```
-完整的选项及默认值
+
+#### 完整的选项及默认值:
 
 ```python
-	# Data params
+    # Data params	
     data_path = 'data/' # 数据集存放路径
     image_size = 96     # 图片尺寸
     
@@ -74,8 +76,8 @@ python main.py generate --netd-path=checkpoints/netd_200.pth \
     epoch_every = 10                    # 每10个epoch保存一次模型
     save_img_path = 'imgs/'             # 可视化训练过程中图片的保存路径
     checkpoints_path = 'checkpoints/'   # 训练持久模型的保存路径
-    netd_path = None  # 'checkpoints/netd_.pth' 预训练模型，如果存在该参数则继续训练
-    netg_path = None  # 'checkpoints/netg_211.pth'
+    netd_path = None                    # 'checkpoints/netd_.pth' 预训练模型
+    netg_path = None                    # 'checkpoints/netg_211.pth'
     
 
     # Generate params
@@ -88,7 +90,8 @@ python main.py generate --netd-path=checkpoints/netd_200.pth \
     gen_std = 1   # 噪声的方差
 ```
 
-生成的部分图片
+#### 生成的部分图片
+
 ![result.png](result.png)
 
 ### 兼容性测试
